@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Sobre</title>
+</head>
+<body>
+    <div class="menu">
+        <h1>Sobre</h1>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/paginas/sobre.html">Calculadora</a></li>
+            <li><a href="/paginas/cuidados.html">Cuidados</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h2>Calculadora de IMC</h2>
+        <div class="input-container">
+            <label for="faixaEtaria">Faixa Etária:</label>
+            <select id="faixaEtaria">
+                <option value="adulto">Adulto</option>
+                <option value="idoso">Idoso</option>
+            </select>
+        </div>
+        <div class="input-container">
+            <label for="altura">Altura (metros):</label>
+            <input type="text" id="altura" placeholder="Ex: 1.75" required>
+        </div>
+        <div class="input-container">
+            <label for="peso">Peso (kg):</label>
+            <input type="text" id="peso" required>
+        </div>
+        <button id="calcular">Calcular IMC</button>
+        <div id="resultado"></div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>
