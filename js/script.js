@@ -24,6 +24,21 @@ function calcularIMC() {
     `;
 
     resultadoDiv.innerHTML = resultadoHTML;
+
+    const imagens = {
+        "Abaixo do Peso": "/img/abaixo_peso.png",
+        "Peso Normal": "/img/peso_normal.png",
+        "Sobrepeso": "/img/sobrepeso.png",
+        "Obesidade Grau I": "/img/obesidade_grau_1.png",
+        "Obesidade Grau II": "/img/obesidade_grau_2.png",
+        "Obesidade Grau III": "/img/obesidade_grau_3.png",
+    };
+    
+    const imagemCategoria = imagens[categoria];
+    if (imagemCategoria) {
+        resultadoDiv.innerHTML += `<br><img src="${imagemCategoria}" alt="${categoria}" style="width: 13%; height: auto; border-radius: 0;">`;
+    }    
+
 }
 
 function calcularIMCBase(altura, peso) {
