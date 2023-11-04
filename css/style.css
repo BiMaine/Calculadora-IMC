@@ -1,7 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
     color: #fff;
-    background-color: #000;
+    background-color: #222;
     margin: 0;
     padding: 0;
     display: flex;
@@ -18,19 +18,21 @@ img {
 
 .menu {
     background-color: #8b0000;
-    text-align: center;
-    padding: 20px 0;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
 }
 
 .menu h1 {
-    color: #fff;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
     font-size: 28px;
-    margin: 20px 0;
-    padding-bottom: 10px;
+    color: #fff;
     text-shadow: 2px 2px 4px #000;
 }
 
@@ -38,6 +40,7 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .menu ul li {
@@ -50,35 +53,46 @@ img {
     color: #fff;
     font-weight: 600;
     font-size: 20px;
-    background-color: #8b0000;
-    border: 2px solid #fff;
-    padding: 12px 24px;
-    border-radius: 24px;
-    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.menu ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+.menu ul li a:hover::before,
+.menu ul li a.active::before {
+    width: 100%;
 }
 
 .menu ul li a:hover {
-    background-color: #fff;
-    color: #000;
-    transform: scale(1.05);
+    color: #fff;
 }
 
 .container {
-    background-color: #000;
+    background-color: #222;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
     text-align: center;
     padding: 40px;
-    max-width: 600px;
+    max-width: 800px;
     width: 80%;
-    margin: 150px;
+    margin: 40px auto;
     position: relative;
     z-index: 1;
 }
 
 .container h2 {
     color: #fff;
-    font-size: 24px;
+    font-size: 28px;
     text-shadow: 2px 2px 4px #000;
 }
 
@@ -90,14 +104,14 @@ img {
 }
 
 .container th, .container td {
-    padding: 8px 12px;
+    padding: 10px 15px;
     border: 1px solid #8b0000;
+    color: #fff;
     text-align: center;
 }
 
 .container th {
     background-color: #8b0000;
-    color: #fff;
     font-weight: 600;
 }
 
@@ -112,7 +126,7 @@ img {
 .input-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     align-items: center;
 }
 
@@ -121,7 +135,6 @@ label {
     text-align: left;
     font-weight: 600;
     color: #fff;
-    text-shadow: 2px 2px 4px #000;
 }
 
 input {
@@ -129,7 +142,7 @@ input {
     padding: 14px;
     border: 1px solid #8b0000;
     border-radius: 4px;
-    background-color: #000;
+    background-color: #333;
     color: #fff;
     font-size: 18px;
     box-shadow: 2px 2px 4px #000;
@@ -161,14 +174,15 @@ button:hover {
 }
 
 .cuidados-container {
-    background-color: #000;
+    background-color: #222;
     color: #fff;
     padding: 40px;
-    margin: 150px;
+    margin: 40px auto;
 }
 
-.cuidados h2 {
-    font-size: 24px;
+.cuidados h2, .cuidados h3 {
+    font-size: 28px;
+    text-align: center;
 }
 
 .cuidados p {
@@ -193,4 +207,12 @@ button:hover {
     display: inline-block;
     width: 1em;
     margin-left: -1em;
+}
+
+.imagem-cuidados {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    margin-top: 50px;
 }
